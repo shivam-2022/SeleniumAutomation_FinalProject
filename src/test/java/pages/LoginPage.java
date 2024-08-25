@@ -2,6 +2,7 @@ package pages;
 
 import Utility.BrowserDriver;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -14,6 +15,7 @@ public class LoginPage extends BrowserDriver {
     private static final By password = By.xpath("//fieldset[@class='fieldset login']//input[@id='pass']");
     private static final By loginbutton = By.xpath("//fieldset[@class='fieldset login']//span[contains(text(),'Sign In')]");
     private static final By welcomeText = By.cssSelector("div[class='panel header'] span[class='logged-in']");
+    private static final String ARGUMENTS_SCROLL_INTO_VIEW = "arguments[0].scrollIntoView(true);";
 
 
     private static final Logger log = LoggerFactory.getLogger(LoginPage.class);
@@ -42,6 +44,16 @@ public class LoginPage extends BrowserDriver {
         String text = driver.findElement(welcomeText).getText();
         System.out.println(text);
         return text;
+    }
+    public static void scrollToElement(By locator){
+
+        ((JavascriptExecutor) driver).executeScript(ARGUMENTS_SCROLL_INTO_VIEW,driver.findElement(locator));
+        try
+        {
+            Thread.sleep(5000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
     }
 
 

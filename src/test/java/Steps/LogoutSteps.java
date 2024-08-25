@@ -7,14 +7,10 @@ import pages.LogoutPage;
 
 public class LogoutSteps {
 
-    @Given("user clicks logout button in the dropdown")
-    public void userClicksLogoutButtonInTheDropdown() {
+
+    @Given("user clicks logout button and logs out successfully")
+    public void userClicksLogoutButtonAndLogsOutSuccessfully() {
         LogoutPage logoutPage = new LogoutPage();
         logoutPage.signOut();
-
-    }
-
-    @Then("user should be logged out")
-    public void userShouldBeLoggedOut() {
     }
 }

@@ -5,4 +5,4 @@ Feature: Validate logout feature for website
     Given User navigate to login page
     When user enters credential and click enter
     Then user should be logged in
-    Given user clicks logout button in the dropdown
+    Given user clicks logout button and logs out successfully
