@@ -1,4 +1,5 @@
 **Overview**
+https://github.com/user-attachments/assets/1d939106-cdd0-49b4-96c2-08a9961032fd
 
 
 Welcome to the Automated Testing Framework project! This framework is designed to help you automate the functional testing of web applications using Selenium and Java. It provides a structured, scalable, and easy-to-maintain environment, enabling efficient testing across various browsers and platforms.
