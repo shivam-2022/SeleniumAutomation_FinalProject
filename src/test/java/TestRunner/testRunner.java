@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
             features = "src/test/java/Features",
             glue = {"Steps", "Utility"},
             plugin = {"pretty","html:target/cucumber-html-report/report.html","json:cucumber.json"},
-            tags = "@Order"
+            tags = "@Test"
     )
     public class testRunner extends AbstractTestNGCucumberTests{
 

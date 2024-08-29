@@ -1,6 +1,6 @@
 Feature: Validate logout feature for website
 
-  @Logout
+  @Test @TC2
   Scenario: Validate user is able to login to website
     Given User navigate to login page
     When user enters credential and click enter

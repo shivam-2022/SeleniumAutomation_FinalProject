@@ -4,7 +4,7 @@ Feature: End to end order place
     Given User navigate to login page
     When user enters credential and click enter
     Then user should be logged in
-    @Order
+    @Test @TC3
     Scenario: Validate user is able to place and order by selecting size and colour of product
       When user search for "tees" in the search box
       Then user selects an item from the list of items
